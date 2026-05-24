@@ -1,6 +1,9 @@
 Deno.serve(async (req: Request) => {
   const url = new URL(req.url);
-  const allowed = ["opensky-network.org"];
+  const allowed = [
+    "opensky-network.org",
+    "catalogogis.cittametropolitana.ve.it"
+  ];
 
   if (req.method === "OPTIONS") {
     return new Response(null, {
