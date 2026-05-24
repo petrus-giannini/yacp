@@ -1,5 +1,6 @@
 Deno.serve(async (req: Request) => {
   const url = new URL(req.url);
+  const allowed = ["opensky-network.org"];
 
   if (req.method === "OPTIONS") {
     return new Response(null, {
@@ -38,7 +39,6 @@ Deno.serve(async (req: Request) => {
       );
     }
 
-    const allowed = ["opensky-network.org"];
     if (!allowed.some(d => parsed.hostname.endsWith(d))) {
       return new Response(
         JSON.stringify({ error: "Dominio non consentito: " + parsed.hostname }),
