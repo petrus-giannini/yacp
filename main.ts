@@ -1,6 +1,9 @@
 /**
  * main.ts — CORS Proxy (Deno Deploy)
  *
+ * Copyright (C) 2026 Pietro Giannini — GNU General Public License v3.0 o successiva.
+ * Codice sorgente e testo della licenza: vedi LICENSE nel repository
+ *
  * Usato da: Flight Tracker, GeoViewer (e progetti futuri)
  *
  * Endpoint: GET /proxy?url=<encoded_target_url>
